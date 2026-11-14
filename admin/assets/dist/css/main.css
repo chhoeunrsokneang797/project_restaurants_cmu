@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Chenla&family=Moul&display=swap');
+@font-face {
+    font-family: 'KhmerOSwatphnom';
+    src: url('../../fonts/KhmerOSwatphnom.ttf');
+}
+@font-face {
+    font-family: 'TACTENG';
+    src: url('../../fonts/TACTENG.TTF');
+}
+body{
+    margin: 0;    
+    /* font-family: "KhmerOSwatphnom", serif; */
+    font-family: "Chenla", serif;
+    font-size: 14px;
+}
+input:focus {
+    border-color: inherit !important; /* Keep the original border color */
+    box-shadow: none !important; /* Remove the default Bootstrap shadow */
+    border: 1px solid #ced4da !important;
+  }
+.login{
+    background: #005ba1;
+    color: #ffffff;
+}
+.login img{
+    height: 100px;
+}
+.login h1{
+    font-family: "Moul", serif;
+    font-weight: 200;
+    font-size: 1em;
+}
+.login h3{
+    font-family: "KhmerOSwatphnom", serif;
+    font-weight: 200;
+    font-size: 1em;
+}
+.login form input{
+    margin-bottom: 10px;
+}
+.login form input[type="email"], .login form input[type="password"]{
+    background: #377fb6;   
+    color: #ffffff; 
+}
+.login form input[type="email"]::placeholder, .login form input[type="password"]::placeholder { /* Most modern browsers support this now. */
+    color:    #909;
+    color: #ffffff;
+ }
+header{
+    background: #005ba1;
+    color: #fff;
+}
+header h1{
+    font-family: "Moul", serif;
+    font-weight: 200;
+    font-size: 20px;    
+    padding-top: 40px;
+}
+header h2{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+header h4{
+    font-family: 'TACTENG';
+    font-size: 80px;
+    margin: -10px;
+    padding: 0;
+}
+.bg-themes {
+    background-color: #005ba1 !important;
+}
+.navbar{
+    border-top: 1px solid #4f7d9f;
+    
+}
+.navbar .navbar-brand{
+    font-size: 18px;
+}
+section{
+    /* height: 1000px;
+    border: 1px solid red; */
+}
+section .form-title{
+    background: #dbdbdb;
+    padding: 10px;
+    font-size: 14px;
+    color: #005ba1;
+}
+.main-form h3{
+    margin: 20px 10px;
+}
+.main-form input{
+    padding: 10px 15px;
+}
+.select2-container--default .select2-selection--multiple.select2-selection--clearable{
+    padding: 8px 0px !important;
+    font-family: 'Chenla';
+}
+/* Custom Select2 Styling */
+.select2-container .select2-selection--single {
+    height: 45px !important;
+    padding: 8px 12px !important;
+    display: flex;
+    align-items: center;
+    border-radius: 8px !important;
+}
+
+.select2-container .select2-selection--multiple {
+    min-height: 45px !important;
+    padding: 8px 12px !important;
+}
+
+.select2-container .select2-results__option {
+    padding: 10px !important;
+    font-size: 16px;
+}
+
+.text-objective {
+    max-width: 500px; /* Adjust as needed */
+    /* width: 500px; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.text-ministry {
+    max-width: 150px; /* Adjust as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tooltip-inner {
+    max-width: 500px; /* Adjust width as needed */
+    white-space: normal; /* Allows text wrapping */
+}
+.return .card{
+    border: 1px solid #005ba1;
+}
+.search .form-select, .search .form-control{
+    padding: 10px !important;
+}
+.search .select2-container--default .select2-selection--single{
+    border-radius: 5px !important;
+}
+/* For Navbar  */
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
+    border-bottom: 2px solid yellow;
+}
+.navbar-dark .navbar-nav .nav-link{
+    border-bottom: 2px solid #005ba1;
+}
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link{
+    border-bottom: 2px solid yellow;
+
+}
+.dropdown-item:focus, .dropdown-item:hover{
+    background: #005ba1;
+    color: #ffffff;
+}
+/* End navbar  */

@@ -1,0 +1,281 @@
+body {
+        background: #f5f7fb;
+        font-family: 'Segoe UI', sans-serif;
+    }    
+
+    .status { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+    .status::before { content: ''; width: 5px; height: 5px; border-radius: 50%; }
+    .st-green { background: rgba(34,201,122,0.12); color: var(--green); }
+    .st-green::before { background: var(--green); }
+    .st-amber { background: rgba(245,166,35,0.12); color: var(--amber); }
+    .st-amber::before { background: var(--amber); }
+    .st-red { background: rgba(242,92,92,0.12); color: var(--red); }
+    .st-red::before { background: var(--red); }
+    .st-blue { background: rgba(79,142,247,0.12); color: var(--accent); }
+    .st-blue::before { background: var(--accent); }
+
+    .page-title {
+        background: #fff;
+        border-radius: 16px;
+        padding: 14px 20px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+        margin-bottom: 25px;
+    }
+
+    .card-custom {
+        background: #fff;
+        border-radius: 18px;
+        padding: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .table thead {
+        background: #f1f5f9;
+    }
+
+    .table thead th {
+        text-align: center;
+        color: #6b7280;
+        padding: 12px 10px;
+        font-size: 13px;
+        white-space: nowrap;
+        /* keep headers on one line */
+    }
+
+    .table tbody td {
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px 8px;
+        font-size: 12px;
+        white-space: nowrap;
+        /* NO wrapping — let table scroll instead */
+    }
+
+    .table tbody tr:hover {
+        background: #f9fafb;
+        transition: .3s;
+    }
+
+    .create-btn {
+        background: #10b981;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 10px 18px;
+        font-size: 16px;
+        transition: .3s;
+    }
+
+    .create-btn:hover {
+        background: #15803d;
+    }
+
+    .form-control,
+    .form-select {
+        border-radius: 10px;
+    }
+
+    .modal-content {
+        border-radius: 15px;
+        border: none;
+        overflow: hidden;
+    }
+
+    .modal-header {
+        background: #1565ED;
+        color: #fff;
+    }
+
+    .btn-group{
+        background: #10b981;
+        outline-color: #10b981;
+    }
+
+    .btn-update {
+        background: #f59e0b;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 18px;
+    }
+
+    .font-bayon {
+        font-family: 'Bayon', sans-serif;
+    }
+
+    .font-kantumruy {
+        font-family: 'Kantumruy Pro', sans-serif;
+    }
+
+    /* ✅ THIS IS THE KEY FIX */
+    .custom-table-scroll {
+        width: 100%;
+        max-height: 400px;
+        overflow-x: auto;
+        /* scroll left-right */
+        overflow-y: auto;
+        /* scroll up-down */
+        border: 1px solid #e5e7eb;
+        border-radius: 15px;
+        background: #fff;
+    }
+
+    .custom-table-scroll table {
+        width: max-content;
+        /* ✅ table grows as wide as content needs */
+        min-width: 100%;
+        margin: 0;
+    }
+
+    .custom-table-scroll thead th {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: #f8fafc;
+    }
+
+    /* SCROLLBAR */
+    .custom-table-scroll::-webkit-scrollbar {
+        height: 6px;
+        width: 6px;
+    }
+
+    .custom-table-scroll::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+    }
+
+    .custom-table-scroll::-webkit-scrollbar-track {
+        background: #f1f5f9;
+    }
+
+    @media(max-width:768px) {
+
+        .page-title {
+            font-size: 22px;
+        }
+
+        .card-custom {
+            padding: 18px;
+        }
+
+        /* .table {
+                    min-width: 700px;
+                } */
+        .custom-table-scroll {
+            max-height: 350px;
+        }
+
+        .custom-table-scroll table {
+            min-width: 900px;
+        }
+
+    }
+
+    /* ===== ADDED: Status Badge Styles ===== */
+    .badge-paid {
+        background: #10b981;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+    .badge-unpaid {
+        background: #f59e0b;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+    /* ===== ADDED: Action Buttons ===== */
+    .btn-accept {
+        background: #10b981;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .btn-reject {
+        background: #ef4444;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    /* Smooth Alert Animation */
+    .smooth-alert {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        min-width: 280px;
+        animation: slideIn 0.4s ease-out forwards;
+    }
+
+    .smooth-alert.fade-in {
+        animation: slideIn 0.4s ease-out forwards, slideOut 0.4s ease-in 1s forwards;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        to {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+
+    .cart-alert {
+        padding: 16px 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .detail-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 14px;
+    }
+
+    .detail-row .lbl {
+        color: #6b7280;
+    }
+
+    .detail-row .val {
+        font-weight: 600;
+        text-align: right;
+    }
+
+
+    

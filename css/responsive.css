@@ -1,0 +1,305 @@
+/* =============================================
+   RESPONSIVE FIXES — Mobile / Tablet / Desktop
+   ANG KOR SIEM REAP
+   ============================================= */
+
+/* ── Base resets ── */
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ══════════════════════════════════════════
+   MOBILE  (≤ 575px)
+══════════════════════════════════════════ */
+@media (max-width: 575.98px) {
+
+  /* Topbar hidden on mobile */
+  .topbar { display: none !important; }
+
+  /* Navbar — fixed at top, doesn't overlap hero */
+  .navbar {
+    padding: 10px 16px !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: rgba(19, 53, 123, 0.97) !important;
+    z-index: 1050 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+  .navbar-brand h3 { font-size: 14px !important; color: #fff !important; }
+  .navbar-brand img { max-height: 30px !important; }
+  .navbar-toggler { border-color: rgba(255,255,255,0.5) !important; }
+  .navbar-toggler .fa-bars { color: #fff; }
+  .navbar-collapse {
+    margin-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    background: rgba(19, 53, 123, 0.97);
+    padding: 8px 0;
+  }
+  .navbar-nav .nav-link { padding: 10px 8px !important; font-size: 15px; color: #fff !important; }
+  .navbar-nav .nav-link:hover { color: #ffc107 !important; }
+
+  /* Push page content below fixed navbar */
+  .container-fluid.position-relative { padding-top: 58px !important; }
+
+  /* Hero Carousel — starts below navbar */
+  .carousel-header { height: auto !important; margin-top: 0; }
+  .carousel-header .carousel-inner .carousel-item { min-height: 420px; }
+  .carousel-header .carousel-inner .carousel-item img {
+    height: 420px !important;
+    object-fit: cover;
+  }
+  .carousel-header .carousel-inner .carousel-item .carousel-caption {
+    padding-top: 40px;
+    height: 420px !important;
+    margin-top: 0 !important;
+  }
+  .carousel-caption h4 { font-size: 12px !important; letter-spacing: 1px !important; }
+  .carousel-caption h2, .carousel-caption h3 { font-size: 1.6rem !important; margin-bottom: 10px !important; }
+  .carousel-caption p { font-size: 13px !important; margin-bottom: 16px !important; }
+  .carousel-caption .btn { padding: 10px 24px !important; font-size: 13px !important; }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon { opacity: 0 !important; }
+
+  /* About */
+  .about .container { padding: 24px 16px !important; }
+  .about .col-lg-5 { display: none; }
+  .about .col-lg-7 { padding: 20px 16px !important; }
+  .about h3 { font-size: 1.4rem !important; }
+  .about p { font-size: 14px; }
+  .about .btn { width: 100%; text-align: center; }
+
+  /* Services */
+  .service-content-inner { flex-direction: column !important; text-align: center !important; }
+  .service-content-inner .service-content { text-align: center !important; }
+  .service-content-inner .service-icon { padding: 16px !important; }
+  .service-content-inner .service-icon i { font-size: 2rem !important; }
+  .service-content h5 { font-size: 15px; }
+  .service-content p { font-size: 13px; }
+
+  /* Destination tabs */
+  .destination .nav-pills { flex-direction: column !important; align-items: stretch !important; gap: 8px; }
+  .destination .nav-item a { width: 100% !important; justify-content: center; }
+  .destination .nav-item a span { width: auto !important; }
+
+  /* Packages carousel nav buttons */
+  .carousel-top-btns { gap: 260px !important; top: -44px !important; }
+  .nav-btn { width: 52px !important; height: 38px !important; font-size: 15px !important; }
+
+  /* Packages card */
+  .packages-item { margin: 0 4px; }
+  .packages-img img { height: 200px !important; }
+  .packages-content h5 { font-size: 14px !important; }
+  .packages-content p { font-size: 12px !important; }
+
+  /* Guide / Chefs */
+  .guide .row { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .guide-item .guide-img-efects img { height: 160px !important; }
+  .guide-title h4 { font-size: 13px !important; }
+  .guide-title p { font-size: 11px !important; }
+
+  /* Subscribe */
+  .subscribe { padding: 40px 16px !important; }
+  .subscribe h3 { font-size: 1.4rem !important; }
+  .subscribe p { font-size: 13px; }
+  .subscribe .form-control { font-size: 13px; }
+  .subscribe .btn { font-size: 12px; padding: 6px 14px !important; }
+
+  /* Footer */
+  .footer .container { padding: 24px 16px !important; }
+  .footer-brand h3 { font-size: 15px !important; }
+  .footer-heading { font-size: 14px !important; }
+  .footer .footer-item a { font-size: 13px !important; line-height: 28px !important; }
+  .footer-social-btn { width: 30px !important; height: 30px !important; font-size: 12px !important; }
+  .hours-row { font-size: 12px !important; }
+  .footer-bank-card a i { font-size: 1.4rem !important; }
+
+  /* Copyright */
+  .copyright .row { flex-direction: column; text-align: center; gap: 6px; }
+  .copyright .col-md-6 { font-size: 12px; }
+
+  /* Back to top */
+  .back-to-top { right: 16px !important; bottom: 16px !important; width: 36px !important; height: 36px !important; }
+
+  /* Section titles */
+  .section-title::before, .section-title::after { display: none; }
+}
+
+
+/* ══════════════════════════════════════════
+   TABLET  (576px – 991px)
+══════════════════════════════════════════ */
+@media (min-width: 576px) and (max-width: 991.98px) {
+
+  /* Topbar */
+  .topbar { display: none !important; }
+
+  /* Navbar */
+  .navbar { padding: 14px 20px !important; }
+  .navbar-brand h3 { font-size: 16px !important; }
+  .navbar-brand img { max-height: 38px !important; }
+  .navbar-collapse { margin-top: 14px; border-top: 1px solid #ddd; }
+  .navbar-nav .nav-link { padding: 10px 0 !important; font-size: 15px !important; }
+
+  /* Hero Carousel */
+  .carousel-header { height: auto !important; }
+  .carousel-header .carousel-inner .carousel-item { min-height: 500px; }
+  .carousel-header .carousel-inner .carousel-item img { height: 500px !important; object-fit: cover; }
+  .carousel-header .carousel-inner .carousel-item .carousel-caption {
+    height: 500px !important; padding-top: 90px;
+  }
+  .carousel-caption h2, .carousel-caption h3 { font-size: 2rem !important; }
+  .carousel-caption p { font-size: 14px !important; }
+
+  /* About */
+  .about .col-lg-5 img { height: 320px; object-fit: cover; }
+  .about .col-lg-7 { padding: 24px 20px !important; }
+
+  /* Services — two per row on tablet */
+  .service .col-lg-6 { width: 100% !important; }
+  .service-content-inner { gap: 12px; }
+  .service-content-inner.pe-0 { padding-right: 12px !important; }
+  .service-content-inner.ps-0 { padding-left: 12px !important; }
+
+  /* Destination tabs */
+  .destination .nav-pills { flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .destination .nav-item a span { width: 120px !important; }
+
+  /* Packages nav buttons */
+  .carousel-top-btns { gap: 520px !important; }
+
+  /* Packages card */
+  .packages-img img { height: 220px !important; }
+
+  /* Guide — 3 columns */
+  .guide .row { row-gap: 20px; }
+  .guide-item .guide-img-efects img { height: 180px !important; }
+
+  /* Footer — 2 columns */
+  .footer .col-xl-3 { width: 50% !important; }
+
+  /* Subscribe */
+  .subscribe h3 { font-size: 1.8rem !important; }
+}
+
+
+/* ══════════════════════════════════════════
+   DESKTOP  (≥ 992px)
+══════════════════════════════════════════ */
+@media (min-width: 992px) {
+
+  /* Topbar */
+  .topbar { display: flex !important; }
+
+  /* Navbar logo — correct size and vertical alignment */
+  .navbar-brand { display: flex; align-items: center; }
+  .navbar-brand img {
+    max-height: 48px !important;
+    width: auto !important;
+    object-fit: contain;
+    margin-right: 10px !important;
+    padding-bottom: 0 !important;
+    vertical-align: middle;
+  }
+  .navbar-brand h3 {
+    font-size: 18px !important;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .sticky-top.navbar-light .navbar-brand img { max-height: 36px !important; }
+  .sticky-top.navbar-light .navbar-brand h3 { font-size: 16px !important; }
+
+  /* Carousel full height */
+  .carousel-header { height: 100vh !important; }
+  .carousel-header .carousel-inner .carousel-item { min-height: 100vh; }
+  .carousel-header .carousel-inner .carousel-item img { height: 100vh; object-fit: cover; }
+  .carousel-header .carousel-inner .carousel-item .carousel-caption { height: 100vh; }
+
+  /* Packages carousel nav buttons auto-gap */
+  .carousel-top-btns { gap: clamp(600px, 50vw + 300px, 1155px) !important; }
+
+  /* About image full height */
+  .about .col-lg-5 img { height: 100%; object-fit: cover; }
+
+  /* Guide chefs — 5 columns maintained */
+  .guide .row-cols-lg-5 > * { width: 20%; }
+  .guide-item .guide-img-efects img { height: 220px !important; object-fit: cover; }
+}
+
+
+/* ══════════════════════════════════════════
+   LARGE DESKTOP  (≥ 1400px)
+══════════════════════════════════════════ */
+@media (min-width: 1400px) {
+  .container { max-width: 1320px !important; }
+  .carousel-caption h2, .carousel-caption h3 { font-size: 3.5rem !important; }
+  .carousel-caption p { font-size: 1.1rem !important; }
+}
+
+
+/* ══════════════════════════════════════════
+   SHARED UTILITY FIXES
+══════════════════════════════════════════ */
+
+/* Destination overlay always visible on touch */
+@media (hover: none) {
+  .destination-overlay { bottom: 0 !important; opacity: 1 !important; }
+  .search-icon a i { opacity: 1 !important; }
+  .packages-img::after { display: none !important; }
+  .gallery-item .gallery-content .gallery-info { opacity: 1 !important; margin: 0 !important; }
+  .gallery-item .gallery-plus-icon { opacity: 1 !important; }
+}
+
+/* Owl carousel responsive item widths */
+.packages-carousel .owl-item { padding: 0 8px; }
+
+/* Destination image consistent height */
+.destination-img img { 
+  height: 260px; 
+  object-fit: cover; 
+  width: 100%;
+}
+
+@media (max-width: 575.98px) {
+  .destination-img img { height: 200px; }
+}
+
+/* Subscribe input + button mobile stacking */
+@media (max-width: 575.98px) {
+  .subscribe .position-relative { display: flex; flex-direction: column; gap: 10px; }
+  .subscribe .position-relative .btn {
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    margin: 0 !important;
+    border-radius: 50rem;
+  }
+  .subscribe .form-control { padding-right: 1rem !important; }
+}
+
+/* Packages image consistent height */
+.packages-item .packages-img img { object-fit: cover; }
+
+/* Footer brand logo alignment */
+.footer-brand h3 { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+
+/* Guide role badge */
+.role-badge {
+  display: inline-block;
+  background: #13357B;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 50px;
+  letter-spacing: 0.04em;
+}
+
+/* Divider line under chef name */
+.divider-line {
+  width: 36px;
+  height: 2px;
+  background: #13357B;
+  border-radius: 2px;
+}

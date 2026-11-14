@@ -1,0 +1,246 @@
+body {
+        background: #f5f7fb;
+        font-family: Arial, sans-serif;
+    }    
+
+    .page-title {
+        background: #fff;
+        border-radius: 16px;
+        padding: 14px 20px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+        margin-bottom: 25px;
+    }
+
+    .card-custom {
+        background: #fff;
+        border-radius: 18px;
+        padding: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .table thead {
+        background: #f1f5f9;
+    }
+
+    .table thead th {
+        text-align: center;
+        color: #6b7280;
+        padding: 12px 10px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .table tbody td {
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px 8px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .table tbody tr:hover {
+        background: #f9fafb;
+        transition: .3s;
+    }
+
+    .font-bayon {
+        font-family: 'Bayon', sans-serif;
+    }
+
+    .font-kantumruy {
+        font-family: 'Kantumruy Pro', sans-serif;
+    }
+
+    .custom-table-scroll {
+        width: 100%;
+        max-height: 400px;
+        overflow-x: auto;
+        overflow-y: auto;
+        border: 1px solid #e5e7eb;
+        border-radius: 15px;
+        background: #fff;
+    }
+
+    .custom-table-scroll table {
+        width: max-content;
+        min-width: 100%;
+        margin: 0;
+    }
+
+    .custom-table-scroll thead th {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: #f8fafc;
+    }
+
+    .custom-table-scroll::-webkit-scrollbar {
+        height: 6px;
+        width: 6px;
+    }
+
+    .custom-table-scroll::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+    }
+
+    .custom-table-scroll::-webkit-scrollbar-track {
+        background: #f1f5f9;
+    }
+
+    @media(max-width:768px) {
+        .page-title {
+            font-size: 22px;
+        }
+
+        .card-custom {
+            padding: 18px;
+        }
+
+        .custom-table-scroll {
+            max-height: 350px;
+        }
+
+        .custom-table-scroll table {
+            min-width: 900px;
+        }
+    }
+
+    .badge-pending {
+        background: #f59e0b;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+    .badge-accepted {
+        background: #10b981;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+    .badge-rejected {
+        background: #ef4444;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+    .badge-paid {
+        background: #10b981;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+    .badge-unpaid {
+        background: #f59e0b;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+    .btn-back {
+        background: #6b7280;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 18px;
+        text-decoration: none;
+    }
+
+    .btn-back:hover {
+        background: #4b5563;
+        color: #fff;
+    }
+
+    .top-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .stats-row {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .stats-box {
+        background: #fff;
+        border-radius: 12px;
+        padding: 15px 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        flex: 1;
+    }
+
+    .stats-box h5 {
+        color: #6b7280;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .stats-box h3 {
+        color: #2563eb;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .detail-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 14px;
+    }
+
+    .detail-row .lbl {
+        color: #6b7280;
+    }
+
+    .detail-row .val {
+        font-weight: 600;
+        text-align: right;
+    }
+
+    /* ── Metric cards ── */
+.metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 22px; }
+.metric-card {
+background: var(--bg2);
+border: 1px solid var(--border);
+border-radius: var(--radius-lg);
+padding: 20px 22px;
+position: relative; overflow: hidden;
+transition: border-color .2s;
+}
+.metric-card:hover { border-color: var(--border2); }
+.metric-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; border-radius: 14px 14px 0 0; }
+.mc-blue::before { background: var(--accent); }
+.mc-red::before { background: var(--red); }
+.mc-green::before { background: var(--green); }
+.mc-purple::before { background: var(--purple); }
+.mc-amber::before { background: var(--amber); }
+.mc-label { font-size: 12px; color: var(--text3); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.mc-icon { width: 28px; height: 28px; border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+.mc-icon svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.mc-icon-blue { background: rgba(79,142,247,0.12); color: var(--accent); }
+.mc-icon-red { background: rgba(79,142,247,0.12); color: var(--red); }
+.mc-icon-green { background: rgba(34,201,122,0.12); color: var(--green); }
+.mc-icon-purple { background: rgba(155,127,250,0.12); color: var(--purple); }
+.mc-icon-amber { background: rgba(245,166,35,0.12); color: var(--amber); }
+.mc-value { font-size: 26px; font-weight: 600; color: var(--text); letter-spacing: -0.8px; margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+.mc-delta { font-size: 12px; display: flex; align-items: center; gap: 5px; }
+.delta-up { color: var(--green); }
+.delta-down { color: var(--red); }
+.mc-delta span { color: var(--text3); }
+.sparkline { position: absolute; bottom: 0; right: 0; opacity: 0.3; }
